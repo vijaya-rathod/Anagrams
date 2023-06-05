@@ -5,6 +5,7 @@
 - Defining the function
 - Calling the function
 - Result
+- Time and space complexity 
 
 ## Anagrams
 
@@ -88,3 +89,10 @@ Even if we give duplicate words in input list, output will not have duplicate el
 Input : ['cat','dog','god','act','tac','god']
 Output: [{'act', 'tac', 'cat'}, {'dog', 'god'}]
 ```
+
+## Time and Space Complexity
+The time complexity of the find_anagrams function I provided is O(n * m log m), where n is the number of words in the input list and m is the length of the longest word in the list.
+
+This is because for each word in the input list, we need to sort its characters, which takes O(m log m) time, and then check if the sorted version already exists in a dictionary. If it does, we add the word to the corresponding set. If it doesn't, we create a new set. Thus, we perform this operation for each word, which gives us a total time complexity of O(n * m log m).
+
+The space complexity of the function is also O(n* m), since the keys are sorted version of words and the values are sets of anagrams.
